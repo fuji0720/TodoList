@@ -1,4 +1,4 @@
 # TodoList
 
-1. **ClientApp**: Request for API and display response on browser  
-2. **API**: Operate database
+1. **ClientApp**: Sends requests to the API and displays responses in the browser.
+2. **API**: Interacts with the database.
