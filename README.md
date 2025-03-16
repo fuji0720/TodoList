@@ -1,7 +1,7 @@
 # TodoList
 
-**ClientApp**: Sends requests to the API and displays responses in the browser.  
-**API**: Interacts with the database.  
+ClientApp: Sends requests to the API and displays responses in the browser.  
+API: Interacts with the database.  
 
 **Code review by ChatGPT 4.5**:  
 [Link to ChatGPT](https://chatgpt.com/share/67d69d82-5e50-800e-bdf7-b71e61bf9f61)  
