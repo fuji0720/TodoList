@@ -2,8 +2,7 @@
 
 1. **ClientApp**: Sends requests to the API and displays responses in the browser.
 2. **API**: Interacts with the database.
-  
-  
+
 Code review by ChatGPT 4.5  
 [link](https://chatgpt.com/share/67d69d82-5e50-800e-bdf7-b71e61bf9f61)  
 In conclusion, the application is functional and the core logic is sound – the API endpoints correspond to the intended CRUD operations and use appropriate patterns on a basic level.
