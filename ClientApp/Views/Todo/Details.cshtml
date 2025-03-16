@@ -1,0 +1,45 @@
+﻿@model TodoItem
+
+@{
+    ViewData["Title"] = "Todo";
+    ViewData["Message"] = "Details of an Item";
+}
+
+<div>
+    <h3>@ViewData["Title"]</h3>
+    <p>@ViewData["Message"]</p>
+</div>
+
+<hr />
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Todo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Todo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsComplete)
+        </dd>
+    </dl>
+
+    <form asp-action="Edit" method="get">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Edit" class="btn btn-primary" />
+    </form>
+</div>
+
+<hr />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

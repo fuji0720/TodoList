@@ -1,0 +1,64 @@
+﻿@model TodoItem
+
+@{
+    ViewData["Title"] = "Todo";
+    ViewData["Message"] = "Edit an Item";
+}
+
+<div>
+    <h3>@ViewData["Title"]</h3>
+    <p>@ViewData["Message"]</p>
+</div>
+
+<hr />
+<form asp-action="EditResult" method="post">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        Id: @Model.Id<br>
+        <input type="hidden" asp-for="Id" />
+    </div>
+
+    <div class="row mb-3">
+        <label asp-for="Todo" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Todo" class="form-control" />
+        </div>
+        <span asp-validation-for="Todo" class="text-danger"></span>
+    </div>
+
+    <fieldset class="row mb-3">
+        <label asp-for="IsComplete" class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input asp-for="IsComplete"
+                       type="radio"
+                       class="form-check-input"
+                       value="true"
+                       id="isCompleteTrue" />
+                <label class="form-check-label" for="isCompleteTrue">True</label>
+            </div>
+            <div class="form-check">
+                <input asp-for="IsComplete"
+                       type="radio"
+                       class="form-check-input"
+                       value="false"
+                       id="isCompleteFalse" />
+                <label class="form-check-label" for="isCompleteFalse">False</label>
+            </div>
+        </div>
+        <span asp-validation-for="IsComplete" class="text-danger"></span>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<hr />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
